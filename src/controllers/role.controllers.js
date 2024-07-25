@@ -8,7 +8,7 @@ export const createRole = async (req, res) => {
     throw new CustomError("Please provide role name", 400);
   }
 
-  const role = await role.createRole({ name });
+  const role = await Role.create({ name });
 
   res.status(201).json({
     success: true,
